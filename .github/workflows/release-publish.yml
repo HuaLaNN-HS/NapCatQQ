@@ -251,10 +251,7 @@ jobs:
         with:
           node-version: 20.x
 
-      - name: Generate release note
-        env:
-          CURRENT_TAG: ${{ inputs.version }}
-        run: node .github/scripts/generate-release-notes.mjs "$CURRENT_TAG" "$GITHUB_REPOSITORY" CHANGELOG.md
+      
 
       - name: Create Release and Upload Artifacts
         uses: softprops/action-gh-release@v2
